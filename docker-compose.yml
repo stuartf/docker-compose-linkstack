@@ -8,7 +8,7 @@ services:
     volumes:
       - 'linkstack_data:/htdocs'
     ports:
-      - '8190:80'
+      - '8190:443'
     restart: unless-stopped
 
 volumes:
