@@ -1,0 +1,15 @@
+services:
+  linkstack:
+    image: 'linkstackorg/linkstack:latest'
+    environment:
+      - SERVER_ADMIN
+      - HTTP_SERVER_NAME=triangle.ninja
+      - HTTPS_SERVER_NAME=triangle.ninja
+    volumes:
+      - 'linkstack_data:/htdocs'
+    ports:
+      - '8190:80'
+    restart: unless-stopped
+
+volumes:
+  linkstack_data:
